@@ -1,7 +1,7 @@
 /* Mealheiro: guarda a app no telefone para funcionar sem internet */
-const CACHE = "mealheiro-v1";
+const CACHE = "mealheiro-v2";
 const FILES = ["./", "./index.html", "./manifest.webmanifest",
-  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png"];
+  "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
